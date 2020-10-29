@@ -252,6 +252,7 @@
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
                 <connections>
                     <id>c73749aa-d93f-33bb-0000-000000000000</id>
                     <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
