@@ -252,7 +252,31 @@
                     </source>
                     <zIndex>0</zIndex>
                 </connections>
+                <connections>
+                    <id>bdab8586-673e-348d-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>76e10b72-b1e8-3465-0000-000000000000</groupId>
+                        <id>477be38e-9503-3766-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
                     <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>Response</selectedRelationships>
+                    <source>
+                        <groupId>76e10b72-b1e8-3465-0000-000000000000</groupId>
+                        <id>c425f853-7620-3ece-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
                 <connections>
                     <id>c73749aa-d93f-33bb-0000-000000000000</id>
                     <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
@@ -274,6 +298,37 @@
                     <source>
                         <groupId>76e10b72-b1e8-3465-0000-000000000000</groupId>
                         <id>a35d4ce6-1540-3af3-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>cbd1735d-7406-3992-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <bends>
+                        <x>480.0</x>
+                        <y>1120.0</y>
+                    </bends>
+                    <destination>
+                        <groupId>76e10b72-b1e8-3465-0000-000000000000</groupId>
+                        <id>477be38e-9503-3766-0000-000000000000</id>
+                        <type>OUTPUT_PORT</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <loadBalanceCompression>DO_NOT_COMPRESS</loadBalanceCompression>
+                    <loadBalancePartitionAttribute></loadBalancePartitionAttribute>
+                    <loadBalanceStatus>LOAD_BALANCE_NOT_CONFIGURED</loadBalanceStatus>
+                    <loadBalanceStrategy>DO_NOT_LOAD_BALANCE</loadBalanceStrategy>
+                    <name></name>
+                    <selectedRelationships>Failure</selectedRelationships>
+                    <selectedRelationships>No Retry</selectedRelationships>
+                    <selectedRelationships>Retry</selectedRelationships>
+                    <source>
+                        <groupId>76e10b72-b1e8-3465-0000-000000000000</groupId>
+                        <id>c425f853-7620-3ece-0000-000000000000</id>
                         <type>PROCESSOR</type>
                     </source>
                     <zIndex>0</zIndex>
@@ -337,7 +392,7 @@
                             </value>
                         </entry>
                     </descriptors>
-                    <name>StandardRestrictedSSLContextService</name>
+                    <name>cacerts_StandardRestrictedSSLContextService</name>
                     <persistsState>false</persistsState>
                     <properties>
                         <entry>
@@ -373,6 +428,177 @@
                     <state>ENABLED</state>
                     <type>org.apache.nifi.ssl.StandardRestrictedSSLContextService</type>
                 </controllerServices>
+                <controllerServices>
+                    <id>7d6bcee5-bec1-335d-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-ssl-context-service-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.12.1</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>Keystore Filename</key>
+                            <value>
+<name>Keystore Filename</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Keystore Password</key>
+                            <value>
+<name>Keystore Password</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>key-password</key>
+                            <value>
+<name>key-password</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Keystore Type</key>
+                            <value>
+<name>Keystore Type</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Truststore Filename</key>
+                            <value>
+<name>Truststore Filename</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Truststore Password</key>
+                            <value>
+<name>Truststore Password</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Truststore Type</key>
+                            <value>
+<name>Truststore Type</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>SSL Protocol</key>
+                            <value>
+<name>SSL Protocol</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>astra_StandardSSLContextService</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Keystore Filename</key>
+                            <value>/nifi/ssl/identity.jks</value>
+                        </entry>
+                        <entry>
+                            <key>Keystore Password</key>
+                        </entry>
+                        <entry>
+                            <key>key-password</key>
+                        </entry>
+                        <entry>
+                            <key>Keystore Type</key>
+                            <value>JKS</value>
+                        </entry>
+                        <entry>
+                            <key>Truststore Filename</key>
+                            <value>/nifi/ssl/trustStore.jks</value>
+                        </entry>
+                        <entry>
+                            <key>Truststore Password</key>
+                        </entry>
+                        <entry>
+                            <key>Truststore Type</key>
+                            <value>JKS</value>
+                        </entry>
+                        <entry>
+                            <key>SSL Protocol</key>
+                            <value>TLSv1.2</value>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.ssl.StandardSSLContextService</type>
+                </controllerServices>
+                <labels>
+                    <id>7e0e59e6-1d19-342c-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1984.0</x>
+                        <y>752.0</y>
+                    </position>
+                    <height>216.0</height>
+                    <label>If you want to use Astra Secure Bundle:
+    Copy the bundle to a nifi owned folder and unpack.
+    Modify the astra_StandardSSLContextService with the path and 
+        passwords to the keystore and truststore.
+    Route the flow to invokeHttp ASTRA on bottom 
+        as by default this template is using cacerts </label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#ffdd57</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>24px</value>
+                        </entry>
+                    </style>
+                    <width>872.0</width>
+                </labels>
+                <labels>
+                    <id>94da4ee6-0e45-3066-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1976.0</x>
+                        <y>480.0</y>
+                    </position>
+                    <height>184.0</height>
+                    <label>Variables Used:
+
+    astraApi: 
+    astraProcessGroupId:
+    astraPassword:
+    astraToken:
+    astraUser:</label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#c6e7f7</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>24px</value>
+                        </entry>
+                    </style>
+                    <width>424.0</width>
+                </labels>
+                <labels>
+                    <id>b7b2a7fc-472c-3f63-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-2016.0</x>
+                        <y>168.0</y>
+                    </position>
+                    <height>272.0</height>
+                    <label>REQUIREMENTS:
+    Get the Process Group ID.
+    Get your Astra Credentials
+    Update Variables
+    Obtain path for java CACERTS
+    Configure &amp; Enable CACERTS SSL Context Service 
+        (password is changeit)</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>24px</value>
+                        </entry>
+                    </style>
+                    <width>968.0</width>
+                </labels>
                 <labels>
                     <id>d333b943-ae86-3823-0000-000000000000</id>
                     <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
@@ -380,7 +606,7 @@
                         <x>-976.0</x>
                         <y>168.0</y>
                     </position>
-                    <height>1056.0</height>
+                    <height>1064.0</height>
                     <label>Get Auth Token</label>
                     <style>
                         <entry>
@@ -388,7 +614,7 @@
                             <value>24px</value>
                         </entry>
                     </style>
-                    <width>1112.0</width>
+                    <width>1576.0</width>
                 </labels>
                 <outputPorts>
                     <id>0ef26305-a3b4-37d5-0000-000000000000</id>
@@ -403,6 +629,20 @@
                     <state>STOPPED</state>
                     <type>OUTPUT_PORT</type>
                     <validationErrors>'Port 'error'' is invalid because Port has no outgoing connections</validationErrors>
+                </outputPorts>
+                <outputPorts>
+                    <id>477be38e-9503-3766-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>120.0</x>
+                        <y>1152.0</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>output2</name>
+                    <state>STOPPED</state>
+                    <type>OUTPUT_PORT</type>
+                    <validationErrors>'Port 'output2'' is invalid because Port has no outgoing connections</validationErrors>
                 </outputPorts>
                 <outputPorts>
                     <id>a07cc9b6-425d-35c7-0000-000000000000</id>
@@ -646,7 +886,7 @@
                             </entry>
                             <entry>
 <key>Remote URL</key>
-<value>http://192.168.74.101:9090/nifi-api/process-groups/${astraDemoNiFiId}/variable-registry/</value>
+<value>http://192.168.74.101:9090/nifi-api/process-groups/${astraProcessGroupId}/variable-registry/</value>
                             </entry>
                             <entry>
 <key>SSL Context Service</key>
@@ -788,7 +1028,7 @@
                         <autoTerminate>false</autoTerminate>
                         <name>Retry</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
                 </processors>
@@ -884,7 +1124,7 @@
                         <autoTerminate>true</autoTerminate>
                         <name>unmatched</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                 </processors>
@@ -1377,7 +1617,7 @@
                         <autoTerminate>false</autoTerminate>
                         <name>Retry</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
                 </processors>
@@ -1451,7 +1691,7 @@
                             </entry>
                             <entry>
 <key>Replacement Value</key>
-<value>{"processGroupRevision":{"version":${processGroupRevisionVersion}},"disconnectedNodeAcknowledged":false,"variableRegistry":{"processGroupId":"${astraDemoNiFiId}","variables":[{"variable":{"name":"astraToken","value":"${authToken}"}}]}}</value>
+<value>{"processGroupRevision":{"version":${processGroupRevisionVersion}},"disconnectedNodeAcknowledged":false,"variableRegistry":{"processGroupId":"${astraProcessGroupId}","variables":[{"variable":{"name":"astraToken","value":"${authToken}"}}]}}</value>
                             </entry>
                             <entry>
 <key>Character Set</key>
@@ -1489,7 +1729,7 @@
                         <autoTerminate>false</autoTerminate>
                         <name>success</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.ReplaceText</type>
                 </processors>
@@ -1585,16 +1825,16 @@
                         <autoTerminate>true</autoTerminate>
                         <name>unmatched</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.EvaluateJsonPath</type>
                 </processors>
                 <processors>
-                    <id>dc906848-1353-35c4-0000-000000000000</id>
+                    <id>c425f853-7620-3ece-0000-000000000000</id>
                     <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
                     <position>
-                        <x>-336.0</x>
-                        <y>952.0</y>
+                        <x>72.0</x>
+                        <y>960.0</y>
                     </position>
                     <bundle>
                         <artifact>nifi-standard-nar</artifact>
@@ -1817,7 +2057,382 @@
                             </entry>
                             <entry>
 <key>Remote URL</key>
-<value>http://192.168.74.101:9090/nifi-api/process-groups/${astraDemoNiFiId}/variable-registry/update-requests</value>
+<value>http://192.168.74.101:9090/nifi-api/process-groups/${astraProcessGroupId}/variable-registry/update-requests</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+<value>7d6bcee5-bec1-335d-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Connection Timeout</key>
+<value>5 secs</value>
+                            </entry>
+                            <entry>
+<key>Read Timeout</key>
+<value>15 secs</value>
+                            </entry>
+                            <entry>
+<key>idle-timeout</key>
+<value>5 mins</value>
+                            </entry>
+                            <entry>
+<key>max-idle-connections</key>
+<value>5</value>
+                            </entry>
+                            <entry>
+<key>Include Date Header</key>
+<value>True</value>
+                            </entry>
+                            <entry>
+<key>Follow Redirects</key>
+<value>True</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Send</key>
+                            </entry>
+                            <entry>
+<key>Useragent</key>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Username</key>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Password</key>
+                            </entry>
+                            <entry>
+<key>proxy-configuration-service</key>
+                            </entry>
+                            <entry>
+<key>Proxy Host</key>
+                            </entry>
+                            <entry>
+<key>Proxy Port</key>
+                            </entry>
+                            <entry>
+<key>Proxy Type</key>
+<value>http</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-user</key>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-password</key>
+                            </entry>
+                            <entry>
+<key>Put Response Body In Attribute</key>
+                            </entry>
+                            <entry>
+<key>Max Length To Put In Attribute</key>
+<value>256</value>
+                            </entry>
+                            <entry>
+<key>Digest Authentication</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Always Output Response</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Add Response Headers to Request</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Content-Type</key>
+<value>${mime.type}</value>
+                            </entry>
+                            <entry>
+<key>send-message-body</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Use Chunked Encoding</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Penalize on "No Retry"</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>use-etag</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>etag-max-cache-size</key>
+<value>10MB</value>
+                            </entry>
+                            <entry>
+<key>ignore-response-content</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>form-body-form-name</key>
+                            </entry>
+                            <entry>
+<key>set-form-filename</key>
+<value>true</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <executionNodeRestricted>false</executionNodeRestricted>
+                    <name>InvokeHTTP ASTRA</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>No Retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Original</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Response</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Retry</name>
+                    </relationships>
+                    <state>DISABLED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+                </processors>
+                <processors>
+                    <id>dc906848-1353-35c4-0000-000000000000</id>
+                    <parentGroupId>76e10b72-b1e8-3465-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-336.0</x>
+                        <y>960.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.12.1</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>HTTP Method</key>
+<value>
+    <name>HTTP Method</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Remote URL</key>
+<value>
+    <name>Remote URL</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+    <name>SSL Context Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Connection Timeout</key>
+<value>
+    <name>Connection Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Read Timeout</key>
+<value>
+    <name>Read Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>idle-timeout</key>
+<value>
+    <name>idle-timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>max-idle-connections</key>
+<value>
+    <name>max-idle-connections</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Include Date Header</key>
+<value>
+    <name>Include Date Header</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Follow Redirects</key>
+<value>
+    <name>Follow Redirects</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Attributes to Send</key>
+<value>
+    <name>Attributes to Send</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Useragent</key>
+<value>
+    <name>Useragent</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Username</key>
+<value>
+    <name>Basic Authentication Username</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Basic Authentication Password</key>
+<value>
+    <name>Basic Authentication Password</name>
+</value>
+                            </entry>
+                            <entry>
+<key>proxy-configuration-service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.proxy.ProxyConfigurationService</identifiesControllerService>
+    <name>proxy-configuration-service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Host</key>
+<value>
+    <name>Proxy Host</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Port</key>
+<value>
+    <name>Proxy Port</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Proxy Type</key>
+<value>
+    <name>Proxy Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-user</key>
+<value>
+    <name>invokehttp-proxy-user</name>
+</value>
+                            </entry>
+                            <entry>
+<key>invokehttp-proxy-password</key>
+<value>
+    <name>invokehttp-proxy-password</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Put Response Body In Attribute</key>
+<value>
+    <name>Put Response Body In Attribute</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Max Length To Put In Attribute</key>
+<value>
+    <name>Max Length To Put In Attribute</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Digest Authentication</key>
+<value>
+    <name>Digest Authentication</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Always Output Response</key>
+<value>
+    <name>Always Output Response</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Add Response Headers to Request</key>
+<value>
+    <name>Add Response Headers to Request</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Content-Type</key>
+<value>
+    <name>Content-Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>send-message-body</key>
+<value>
+    <name>send-message-body</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Use Chunked Encoding</key>
+<value>
+    <name>Use Chunked Encoding</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Penalize on "No Retry"</key>
+<value>
+    <name>Penalize on "No Retry"</name>
+</value>
+                            </entry>
+                            <entry>
+<key>use-etag</key>
+<value>
+    <name>use-etag</name>
+</value>
+                            </entry>
+                            <entry>
+<key>etag-max-cache-size</key>
+<value>
+    <name>etag-max-cache-size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>ignore-response-content</key>
+<value>
+    <name>ignore-response-content</name>
+</value>
+                            </entry>
+                            <entry>
+<key>form-body-form-name</key>
+<value>
+    <name>form-body-form-name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>set-form-filename</key>
+<value>
+    <name>set-form-filename</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>HTTP Method</key>
+<value>POST</value>
+                            </entry>
+                            <entry>
+<key>Remote URL</key>
+<value>http://192.168.74.101:9090/nifi-api/process-groups/${astraProcessGroupId}/variable-registry/update-requests</value>
                             </entry>
                             <entry>
 <key>SSL Context Service</key>
@@ -1938,7 +2553,7 @@
                         <yieldDuration>1 sec</yieldDuration>
                     </config>
                     <executionNodeRestricted>false</executionNodeRestricted>
-                    <name>InvokeHTTP</name>
+                    <name>InvokeHTTP CACERTS</name>
                     <relationships>
                         <autoTerminate>false</autoTerminate>
                         <name>Failure</name>
@@ -1959,7 +2574,7 @@
                         <autoTerminate>false</autoTerminate>
                         <name>Retry</name>
                     </relationships>
-                    <state>RUNNING</state>
+                    <state>STOPPED</state>
                     <style/>
                     <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
                 </processors>
@@ -1969,12 +2584,12 @@
             <name>Astra GetAuthToken</name>
             <variables>
                 <entry>
-                    <key>astraToken</key>
-                    <value>2ea35f05-ed3b-4c1d-b374-5fd56551170b</value>
+                    <key>astraProcessGroupId</key>
+                    <value>41cfbcbc-ac80-3a41-f718-46c8450eb4b0</value>
                 </entry>
                 <entry>
-                    <key>astraDemoNiFiId</key>
-                    <value>41cfbcbc-ac80-3a41-f718-46c8450eb4b0</value>
+                    <key>astraToken</key>
+                    <value>2ea35f05-ed3b-4c1d-b374-5fd56551170b</value>
                 </entry>
                 <entry>
                     <key>astraUser</key>
@@ -1991,5 +2606,5 @@
             </variables>
         </processGroups>
     </snippet>
-    <timestamp>10/29/2020 16:52:50 UTC</timestamp>
+    <timestamp>10/29/2020 17:26:17 UTC</timestamp>
 </template>
